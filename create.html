@@ -13,30 +13,19 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="rueleta.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/rueleta.css">
 </head>
 
 <body>
   <div id="app">
     <nav class="navbar navbar-expand-lg bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand text-light" href="/">Desafío Sin Filtro
+        </a>
+        <button class="navbar-toggler" type="button" @click="addQuestionsQR" >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-warning" type="submit">Search</button>
-          </form>
-        </div>
       </div>
     </nav>
 
@@ -63,11 +52,14 @@
                 </div>
            
               </div>
-            </div>
-             
-              
+            </div>    
           </form>
         </div>
+        <div class="col d-grid gap-2 col-6 mx-auto">
+          <a class="btn btn-primary" href="https://sthalinrivera.github.io/Desafio_Sin_Filtro_vuejs/" data-bs-target="#exampleModalToggle2"
+            data-bs-toggle="modal">volver al juego</a>
+        </div>
+
 
         <ul class="list-group mt-2">
           <li class="list-group-item bg-primary" v-for="reto in retos" :key="reto.id">
@@ -104,12 +96,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+  <script src="js/vue@2.6.14.min.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/js/bootstrap.min.js"></script>
-  <script src="create.js"></script>
+  <script src="js/create.js"></script>
 </body>
 
 </html>
